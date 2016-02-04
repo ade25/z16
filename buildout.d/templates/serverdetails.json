@@ -1,5 +1,5 @@
 {
-  "server": "zope8",
+  "server": "z16",
   "servername": "${hosts:public}",
   "nginx": "${component-versions:nginx}",
   "varnish": "${component-versions:varnish}",

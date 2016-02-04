@@ -8,6 +8,7 @@ from fabric.contrib.files import exists
 
 from ade25.fabfiles import project
 from ade25.fabfiles.server import controls
+from ade25.fabfiles.server import setup
 from ade25.fabfiles import hotfix as hf
 
 from slacker import Slacker
@@ -140,3 +141,22 @@ def hotfix(addon=None):
     """ Apply hotfix to all hosted sites """
     hf.prepare_sites()
     hf.process_hotfix()
+
+
+@task
+def provision():
+    """ Provision new machine
+
+    This task should only ever be run once when provisioning a new
+    physical machine. Particular errors caused by subtasks will cause
+    the process to abort and the server will be left in an inconsistent
+    state. Please take note of the specific error message in the console
+    """
+    setup.configure_fs()
+    setup.set_project_user_and_group('www', 'www')
+    setup.install_system_libs()
+    setup.install_python_tools()
+    setup.configure_egg_cache()
+    setup.install_webserver()
+    setup.setup_webserver_autostart()
+    setup.setup_firewall()

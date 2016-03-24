@@ -87,7 +87,7 @@ def deploy(actor=None):
     with cd(env.webserver):
         run('bin/supervisorctl reread')
         run('bin/supervisorctl update')
-    msg = '[s1] s1.ade25.de server configuration deployed by %(actor)s' % opts
+    msg = '[z16] z16.ade25.de server configuration deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
     slack.chat.post_message('#general', msg, username=user, icon_emoji=icon)
@@ -106,7 +106,7 @@ def update(sitename=None, actor=None):
         run('nice bin/buildout -Nc deployment.cfg')
     with cd(env.webserver):
         run('nice bin/supervisorctl restart instance-%(sitename)s' % opts)
-    msg = '[s1] %(sitename)s deployed by %(actor)s' % opts
+    msg = '[z16] %(sitename)s deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
     slack.chat.post_message('#general', msg, username=user, icon_emoji=icon)

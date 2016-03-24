@@ -26,7 +26,7 @@ env.code_root = '/opt/webserver/buildout.webserver'
 env.host_root = '/opt/sites'
 env.actor = ${settings:username}
 
-env.hosts = ['z8']
+env.hosts = ['z16']
 env.hosted_sites = [
     '${sites:zope1}',
     '${sites:zope2}',

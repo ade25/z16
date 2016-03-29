@@ -10,7 +10,7 @@ email = info@ade25.de
 
 # Uncomment and update to generate certificates for the specified
 # domains.
-domains = z16.ade25.de, ${hosts:zope1}, ${hosts:zope2}, ${hosts:zope3}, ${hosts:zope4}, ${hosts:zope5}, ${hosts:zope6}, ${hosts:zope7}
+domains = z16.ade25.de, ${hosts:zope1}, ${hosts:zope2}
 
 # Uncomment to use a text interface instead of ncurses
 # text = True

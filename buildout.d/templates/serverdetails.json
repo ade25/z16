@@ -46,42 +46,6 @@
       "type": "plone",
       "port": "${site7:zope-port}",
       "url": "${site7:servername}"
-    },
-    {
-      "title": "${site8:sitename}",
-      "type": "plone",
-      "port": "${site8:zope-port}",
-      "url": "${site8:servername}"
-    },
-    {
-      "title": "${site9:sitename}",
-      "type": "plone",
-      "port": "${site9:zope-port}",
-      "url": "${site9:servername}"
-    },
-    {
-      "title": "${site10:sitename}",
-      "type": "plone",
-      "port": "${site10:zope-port}",
-      "url": "${site10:servername}"
-    },
-    {
-      "title": "${site11:sitename}",
-      "type": "plone",
-      "port": "${site11:zope-port}",
-      "url": "${site11:servername}"
-    },
-    {
-      "title": "${site12:sitename}",
-      "type": "plone",
-      "port": "${site12:zope-port}",
-      "url": "${site12:servername}"
-    },
-    {
-      "title": "${site13:sitename}",
-      "type": "plone",
-      "port": "${site13:zope-port}",
-      "url": "${site13:servername}"
     }
   ]
 }

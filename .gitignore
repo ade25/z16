@@ -32,3 +32,7 @@ pip-selfcheck.json
 src/ade25.fabfiles
 var
 .Python
+# Enable nginx specific settings
+!cache_control_assets.conf
+!disable_logging.conf
+!proxy_settings.conf
